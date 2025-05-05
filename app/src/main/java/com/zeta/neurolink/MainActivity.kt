@@ -35,6 +35,8 @@ class MainActivity : AppCompatActivity() {
         // Forzar modo claro
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         setContentView(R.layout.activity_main)
+        //id usuario
+        val idusuario = intent.getIntExtra("idusuario",-1)
 
     }
 }

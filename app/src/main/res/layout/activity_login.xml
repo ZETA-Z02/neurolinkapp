@@ -40,7 +40,6 @@
         android:background="#3F51B5"
         android:enabled="true"
         android:foregroundTint="#03A9F4"
-        android:onClick="login"
         android:text="Iniciar Sesion"
         android:textSize="20sp"
         android:textStyle="bold"
