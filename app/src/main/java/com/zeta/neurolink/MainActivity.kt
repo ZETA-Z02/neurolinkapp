@@ -40,6 +40,6 @@ class MainActivity : AppCompatActivity() {
 
         // id usuario
         val idusuario = intent.getIntExtra("idusuario", -1)
-        Toast.makeText(this, "$idusuario", Toast.LENGTH_LONG).show()
+        // Toast.makeText(this, "$idusuario", Toast.LENGTH_LONG).show()
     }
 }

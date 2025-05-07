@@ -43,6 +43,9 @@ class crearcuenta : AppCompatActivity() {
         val btnregistrar = findViewById<Button>(R.id.btnCrearCuenta)
         btnregistrar.setOnClickListener {
             registrar()
+//            val intent = Intent(this, Terminos::class.java)
+//            startActivity(intent)
+//            finish()
         }
     }
     private fun registrar(){
@@ -74,7 +77,7 @@ class crearcuenta : AppCompatActivity() {
                         val success = respuestajson.getBoolean("response")
                         val error = respuestajson.getBoolean("error")
                         if(success && !error){
-                            val intent = Intent(this, LoginActivity::class.java)
+                            val intent = Intent(this, Terminos::class.java)
                             startActivity(intent)
                             finish()
                         }else{

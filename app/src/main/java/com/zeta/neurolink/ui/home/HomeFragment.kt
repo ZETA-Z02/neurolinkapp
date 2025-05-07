@@ -33,9 +33,6 @@ class HomeFragment : Fragment() {
 //        homeViewModel.text.observe(viewLifecycleOwner) {
 //            textView.text = it
 //        }
-        binding.button.setOnClickListener {
-            Toast.makeText(requireContext(), "Botón presionado", Toast.LENGTH_SHORT).show()
-        }
         return root
     }
 

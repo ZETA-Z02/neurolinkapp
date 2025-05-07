@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Terminos">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Términos y Condiciones"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/textView4"
+        app:layout_constraintBottom_toTopOf="@id/checkBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/textoTerminos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:text="Bienvenido a NeuroLink. Al registrarse o utilizar esta aplicación, usted acepta los siguientes términos y condiciones:\n
+
+1. **Uso de la aplicación:** Esta aplicación es un prototipo con fines educativos y no sustituye asesoramiento médico o psicológico profesional.\n
+
+2. **Privacidad:** Los datos ingresados son utilizados únicamente dentro del marco de la aplicación y no serán compartidos con terceros sin consentimiento.\n
+
+3. **Responsabilidad:** NeuroLink no se responsabiliza por las decisiones tomadas por los usuarios basadas en los contenidos presentados.\n
+
+4. **Contenido:** El contenido mostrado, incluidos tips y videos, es de carácter orientativo y no debe considerarse diagnóstico ni tratamiento.\n
+
+5. **Edad mínima:** El uso está destinado a personas mayores de 13 años.\n
+
+6. **Modificaciones:** Estos términos pueden cambiar en cualquier momento. Se notificará a los usuarios cuando esto ocurra.\n
+
+Al continuar, usted confirma que ha leído y acepta estos términos y condiciones.\n" />
+    </ScrollView>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acepto los términos y condiciones"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/scrollView"
+        app:layout_constraintBottom_toTopOf="@id/btncontinuar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btncontinuar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continuar"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
