@@ -22,7 +22,13 @@
         android:name="com.zeta.neurolink.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
-<!--    detalle de los retos-->
+    <fragment
+        android:id="@+id/navigation_profesionales"
+        android:name="com.zeta.neurolink.ui.ProfesionalesFragment"
+        android:label="Psicólogos"
+        tools:layout="@layout/fragment_profesionales" />
+
+    <!--    detalle de los retos-->
     <fragment
         android:id="@+id/retoDetalleFragment"
         android:name="com.zeta.neurolink.ui.dashboard.RetoDetalleFragment"

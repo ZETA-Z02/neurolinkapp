@@ -83,13 +83,23 @@ class HomeFragment : Fragment() {
     private fun cargarDatosUsuario(jsonUsuario: JSONObject) {
         val nombre = jsonUsuario.getString("nombres")
         val puntaje = jsonUsuario.getInt("puntaje")
-        val categoria = jsonUsuario.getString("nivel")
+        val categoria = jsonUsuario.getInt("nivel")
 
         binding.textNombreUsuario.text = nombre
         binding.textPuntaje.text = "Puntaje: $puntaje"
-        binding.textCategoria.text = "Categoría: $categoria"
+        val categoriaView = when {
+            categoria == 1 -> "timidez"
+            categoria == 2 -> "antisocial"
+            categoria == 3 -> "asocial"
+            categoria == 4 -> "emo"
+            categoria == 5 -> "psicopata"
+            else -> "timidez"
+        }
+        binding.textCategoria.text = "Categoría: $categoriaView"
 
         val nivel = when {
+            puntaje >= 2000 -> "Jefe"
+            puntaje >= 1000 -> "Diamante"
             puntaje >= 500 -> "Oro"
             puntaje >= 200 -> "Bronce"
             puntaje >= 50 -> "Inicial"

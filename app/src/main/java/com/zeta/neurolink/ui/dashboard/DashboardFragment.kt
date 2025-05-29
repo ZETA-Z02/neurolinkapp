@@ -50,7 +50,7 @@ class DashboardFragment : Fragment() {
         // val idusuario = 6 // ID de prueba
         val mainActivity = activity as? MainActivity
         val idusuario = mainActivity?.idusuario ?: -1
-        Toast.makeText(requireContext(), "id: $idusuario", Toast.LENGTH_LONG).show()
+        //Toast.makeText(requireContext(), "id: $idusuario", Toast.LENGTH_LONG).show()
         //Llamada a la API
         peticion(idusuario) { edad, nivel ->
             val nivelTexto = when (nivel) {

@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@android:id/background">
-        <shape android:shape="ring" android:thicknessRatio="20">
+        <shape
+            android:shape="ring"
+            android:useLevel="false"
+            android:thicknessRatio="10">
+            <size
+                android:width="200dp"
+                android:height="200dp" />
             <solid android:color="#D3D3D3" />
         </shape>
     </item>
+
     <item android:id="@android:id/progress">
-        <shape android:shape="ring" android:thicknessRatio="20">
+        <shape
+            android:shape="ring"
+            android:useLevel="true"
+            android:thicknessRatio="10">
+            <size
+                android:width="200dp"
+                android:height="200dp" />
             <solid android:color="#3F51B5" />
         </shape>
     </item>

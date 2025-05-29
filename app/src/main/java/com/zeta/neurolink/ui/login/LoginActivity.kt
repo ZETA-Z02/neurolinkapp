@@ -134,9 +134,9 @@ class LoginActivity : AppCompatActivity() {
             val json = JSONObject(response.body)
             if (json.getBoolean("success") && !json.getBoolean("error")) {
                 val data = json.getJSONObject("data")
-                val puntaje = data.getString("puntaje")
+                val puntaje = data.getInt("puntaje")
 
-                val destination = if (puntaje == "1") {
+                val destination = if (puntaje > 1) {
                     MainActivity::class.java
                 } else {
                     Preguntas::class.java
