@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Preguntas">
+
+    <LinearLayout
+        android:id="@+id/contenedorPreguntas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="30dp"
+        android:paddingHorizontal="5dp">
+
+        <TextView
+            android:id="@+id/textViewTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Formulario Preguntas"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:paddingBottom="16dp"/>
+
+        <!-- Aquí irán las 15 preguntas dinámicamente (lo puedes crear desde código también) -->
+
+        <!-- Pregunta 1 de ejemplo -->
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Me siento nervioso(a) cuando tengo que hablar frente a un grupo de personas." />
+
+        <!-- Repite esto para preguntas 2 a 15 cambiando los IDs -->
+
+        <!-- Al final, el botón -->
+
+        <RadioGroup
+            android:id="@+id/pregunta1"
+            android:layout_width="395dp"
+            android:layout_height="270dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/p1_op1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en desacuerdo"
+                android:tag="1"/>
+
+            <RadioButton
+                android:id="@+id/p1_op2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="En desacuerdo"
+                android:tag="2"/>
+
+            <RadioButton
+                android:id="@+id/p1_op3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ni de acuerdo ni en desacuerdo"
+                android:tag="3"/>
+
+            <RadioButton
+                android:id="@+id/p1_op4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="De acuerdo"
+                android:tag="4"/>
+
+            <RadioButton
+                android:id="@+id/p1_op5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en acuerdo"
+                android:tag="5"/>
+        </RadioGroup>
+        <!-- Pregunta 1 de ejemplo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. Evito participar en conversaciones de grupo por temor a decir algo inapropiado." />
+
+        <!-- Repite esto para preguntas 2 a 15 cambiando los IDs -->
+
+        <!-- Al final, el botón -->
+
+        <RadioGroup
+            android:id="@+id/pregunta2"
+            android:layout_width="395dp"
+            android:layout_height="270dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/p2_op1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en desacuerdo"
+                android:tag="1"/>
+
+            <RadioButton
+                android:id="@+id/p2_op2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="En desacuerdo"
+                android:tag="2"/>
+
+            <RadioButton
+                android:id="@+id/p2_op3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ni de acuerdo ni en desacuerdo"
+                android:tag="3"/>
+
+            <RadioButton
+                android:id="@+id/p2_op4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="De acuerdo"
+                android:tag="4"/>
+
+            <RadioButton
+                android:id="@+id/p2_op5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en acuerdo"
+                android:tag="5"/>
+        </RadioGroup>
+        <!-- Pregunta 1 de ejemplo -->
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. Me preocupa mucho lo que piensen los demás sobre mis comentarios." />
+
+        <!-- Repite esto para preguntas 2 a 15 cambiando los IDs -->
+
+        <!-- Al final, el botón -->
+
+        <RadioGroup
+            android:id="@+id/pregunta3"
+            android:layout_width="395dp"
+            android:layout_height="270dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/p3_op1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en desacuerdo"
+                android:tag="1"/>
+
+            <RadioButton
+                android:id="@+id/p3_op2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="En desacuerdo"
+                android:tag="2"/>
+
+            <RadioButton
+                android:id="@+id/p3_op3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ni de acuerdo ni en desacuerdo"
+                android:tag="3"/>
+
+            <RadioButton
+                android:id="@+id/p3_op4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="De acuerdo"
+                android:tag="4"/>
+
+            <RadioButton
+                android:id="@+id/p3_op5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en acuerdo"
+                android:tag="5"/>
+        </RadioGroup>
+        <!-- Pregunta 1 de ejemplo -->
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4. Me cuesta expresar mis emociones de manera clara en situaciones sociales." />
+
+        <!-- Repite esto para preguntas 2 a 15 cambiando los IDs -->
+
+        <!-- Al final, el botón -->
+
+        <RadioGroup
+            android:id="@+id/pregunta4"
+            android:layout_width="395dp"
+            android:layout_height="270dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/p4_op1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en desacuerdo"
+                android:tag="1"/>
+
+            <RadioButton
+                android:id="@+id/p4_op2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="En desacuerdo"
+                android:tag="2"/>
+
+            <RadioButton
+                android:id="@+id/p4_op3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ni de acuerdo ni en desacuerdo"
+                android:tag="3"/>
+
+            <RadioButton
+                android:id="@+id/p4_op4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="De acuerdo"
+                android:tag="4"/>
+
+            <RadioButton
+                android:id="@+id/p4_op5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en acuerdo"
+                android:tag="5"/>
+        </RadioGroup>
+        <!-- Pregunta 1 de ejemplo -->
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5. Me siento incómodo(a) al interactuar con personas desconocidas." />
+
+        <!-- Repite esto para preguntas 2 a 15 cambiando los IDs -->
+
+        <!-- Al final, el botón -->
+
+        <RadioGroup
+            android:id="@+id/pregunta5"
+            android:layout_width="395dp"
+            android:layout_height="270dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/p5_op1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en desacuerdo"
+                android:tag="1"/>
+
+            <RadioButton
+                android:id="@+id/p5_op2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="En desacuerdo"
+                android:tag="2"/>
+
+            <RadioButton
+                android:id="@+id/p5_op3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ni de acuerdo ni en desacuerdo"
+                android:tag="3"/>
+
+            <RadioButton
+                android:id="@+id/p5_op4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="De acuerdo"
+                android:tag="4"/>
+
+            <RadioButton
+                android:id="@+id/p5_op5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en acuerdo"
+                android:tag="5"/>
+        </RadioGroup>
+        <!-- Pregunta 1 de ejemplo -->
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6. Prefiero mantenerme al margen para no sentirme excluido(a)." />
+
+        <!-- Repite esto para preguntas 2 a 15 cambiando los IDs -->
+
+        <!-- Al final, el botón -->
+
+        <RadioGroup
+            android:id="@+id/pregunta6"
+            android:layout_width="395dp"
+            android:layout_height="270dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/p6_op1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en desacuerdo"
+                android:tag="1"/>
+
+            <RadioButton
+                android:id="@+id/p6_op2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="En desacuerdo"
+                android:tag="2"/>
+
+            <RadioButton
+                android:id="@+id/p6_op3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ni de acuerdo ni en desacuerdo"
+                android:tag="3"/>
+
+            <RadioButton
+                android:id="@+id/p6_op4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="De acuerdo"
+                android:tag="4"/>
+
+            <RadioButton
+                android:id="@+id/p6_op5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en acuerdo"
+                android:tag="5"/>
+        </RadioGroup>
+        <!-- Pregunta 1 de ejemplo -->
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7. Me siento presionado(a) por cumplir con las expectativas de los demás." />
+
+        <!-- Repite esto para preguntas 2 a 15 cambiando los IDs -->
+
+        <!-- Al final, el botón -->
+
+        <RadioGroup
+            android:id="@+id/pregunta7"
+            android:layout_width="395dp"
+            android:layout_height="270dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/p7_op1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en desacuerdo"
+                android:tag="1"/>
+
+            <RadioButton
+                android:id="@+id/p7_op2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="En desacuerdo"
+                android:tag="2"/>
+
+            <RadioButton
+                android:id="@+id/p7_op3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ni de acuerdo ni en desacuerdo"
+                android:tag="3"/>
+
+            <RadioButton
+                android:id="@+id/p7_op4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="De acuerdo"
+                android:tag="4"/>
+
+            <RadioButton
+                android:id="@+id/p7_op5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en acuerdo"
+                android:tag="5"/>
+        </RadioGroup>
+        <!-- Pregunta 1 de ejemplo -->
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8. Tengo dificultad para confiar en mi capacidad de hablar bien sobre un tema que no he preparado." />
+
+        <!-- Repite esto para preguntas 2 a 15 cambiando los IDs -->
+
+        <!-- Al final, el botón -->
+
+        <RadioGroup
+            android:id="@+id/pregunta8"
+            android:layout_width="395dp"
+            android:layout_height="270dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/p8_op1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en desacuerdo"
+                android:tag="1"/>
+
+            <RadioButton
+                android:id="@+id/p8_op2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="En desacuerdo"
+                android:tag="2"/>
+
+            <RadioButton
+                android:id="@+id/p8_op3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ni de acuerdo ni en desacuerdo"
+                android:tag="3"/>
+
+            <RadioButton
+                android:id="@+id/p8_op4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="De acuerdo"
+                android:tag="4"/>
+
+            <RadioButton
+                android:id="@+id/p8_op5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en acuerdo"
+                android:tag="5"/>
+        </RadioGroup>
+        <!-- Pregunta 1 de ejemplo -->
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9. Siento que nunca estoy a la altura de lo que los demás esperan de mí." />
+
+        <!-- Repite esto para preguntas 2 a 15 cambiando los IDs -->
+
+        <!-- Al final, el botón -->
+
+        <RadioGroup
+            android:id="@+id/pregunta9"
+            android:layout_width="395dp"
+            android:layout_height="270dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/p9_op1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en desacuerdo"
+                android:tag="1"/>
+
+            <RadioButton
+                android:id="@+id/p9_op2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="En desacuerdo"
+                android:tag="2"/>
+
+            <RadioButton
+                android:id="@+id/p9_op3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ni de acuerdo ni en desacuerdo"
+                android:tag="3"/>
+
+            <RadioButton
+                android:id="@+id/p9_op4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="De acuerdo"
+                android:tag="4"/>
+
+            <RadioButton
+                android:id="@+id/p9_op5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en acuerdo"
+                android:tag="5"/>
+        </RadioGroup>
+        <!-- Pregunta 1 de ejemplo -->
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10. Me siento menos valioso(a) cuando comparo mis habilidades con las de los demás." />
+
+        <!-- Repite esto para preguntas 2 a 15 cambiando los IDs -->
+
+        <!-- Al final, el botón -->
+
+        <RadioGroup
+            android:id="@+id/pregunta10"
+            android:layout_width="395dp"
+            android:layout_height="270dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/p10_op1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en desacuerdo"
+                android:tag="1"/>
+
+            <RadioButton
+                android:id="@+id/p10_op2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="En desacuerdo"
+                android:tag="2"/>
+
+            <RadioButton
+                android:id="@+id/p10_op3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ni de acuerdo ni en desacuerdo"
+                android:tag="3"/>
+
+            <RadioButton
+                android:id="@+id/p10_op4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="De acuerdo"
+                android:tag="4"/>
+
+            <RadioButton
+                android:id="@+id/p10_op5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en acuerdo"
+                android:tag="5"/>
+        </RadioGroup>
+        <!-- Pregunta 1 de ejemplo -->
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11. Me cuesta relajarme porque temo las posibles consecuencias de mis palabras." />
+
+        <!-- Repite esto para preguntas 2 a 15 cambiando los IDs -->
+
+        <!-- Al final, el botón -->
+
+        <RadioGroup
+            android:id="@+id/pregunta11"
+            android:layout_width="395dp"
+            android:layout_height="270dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/p11_op1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en desacuerdo"
+                android:tag="1"/>
+
+            <RadioButton
+                android:id="@+id/p11_op2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="En desacuerdo"
+                android:tag="2"/>
+
+            <RadioButton
+                android:id="@+id/p11_op3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ni de acuerdo ni en desacuerdo"
+                android:tag="3"/>
+
+            <RadioButton
+                android:id="@+id/p11_op4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="De acuerdo"
+                android:tag="4"/>
+
+            <RadioButton
+                android:id="@+id/p11_op5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en acuerdo"
+                android:tag="5"/>
+        </RadioGroup>
+        <!-- Pregunta 1 de ejemplo -->
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12. Me resulta difícil pedir ayuda o expresar mis necesidades." />
+
+        <!-- Repite esto para preguntas 2 a 15 cambiando los IDs -->
+
+        <!-- Al final, el botón -->
+
+        <RadioGroup
+            android:id="@+id/pregunta12"
+            android:layout_width="395dp"
+            android:layout_height="270dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/p12_op1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en desacuerdo"
+                android:tag="1"/>
+
+            <RadioButton
+                android:id="@+id/p12_op2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="En desacuerdo"
+                android:tag="2"/>
+
+            <RadioButton
+                android:id="@+id/p12_op3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ni de acuerdo ni en desacuerdo"
+                android:tag="3"/>
+
+            <RadioButton
+                android:id="@+id/p12_op4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="De acuerdo"
+                android:tag="4"/>
+
+            <RadioButton
+                android:id="@+id/p12_op5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en acuerdo"
+                android:tag="5"/>
+        </RadioGroup>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13. Me siento inseguro(a) o cohibido(a) por experiencias pasadas de abuso o trauma." />
+
+        <!-- Repite esto para preguntas 2 a 15 cambiando los IDs -->
+
+        <!-- Al final, el botón -->
+
+        <RadioGroup
+            android:id="@+id/pregunta13"
+            android:layout_width="395dp"
+            android:layout_height="270dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/p13_op1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en desacuerdo"
+                android:tag="1"/>
+
+            <RadioButton
+                android:id="@+id/p13_op2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="En desacuerdo"
+                android:tag="2"/>
+
+            <RadioButton
+                android:id="@+id/p13_op3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ni de acuerdo ni en desacuerdo"
+                android:tag="3"/>
+
+            <RadioButton
+                android:id="@+id/p13_op4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="De acuerdo"
+                android:tag="4"/>
+
+            <RadioButton
+                android:id="@+id/p13_op5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en acuerdo"
+                android:tag="5"/>
+        </RadioGroup>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14. A menudo me pongo en blanco y no recuerdo lo que iba a decir." />
+
+        <!-- Repite esto para preguntas 2 a 15 cambiando los IDs -->
+
+        <!-- Al final, el botón -->
+
+        <RadioGroup
+            android:id="@+id/pregunta14"
+            android:layout_width="395dp"
+            android:layout_height="270dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/p14_op1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en desacuerdo"
+                android:tag="1"/>
+
+            <RadioButton
+                android:id="@+id/p14_op2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="En desacuerdo"
+                android:tag="2"/>
+
+            <RadioButton
+                android:id="@+id/p14_op3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ni de acuerdo ni en desacuerdo"
+                android:tag="3"/>
+
+            <RadioButton
+                android:id="@+id/p14_op4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="De acuerdo"
+                android:tag="4"/>
+
+            <RadioButton
+                android:id="@+id/p14_op5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en acuerdo"
+                android:tag="5"/>
+        </RadioGroup>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15. Evito situaciones en las que tengo que asumir un rol de liderazgo o hablar en público." />
+
+        <!-- Repite esto para preguntas 2 a 15 cambiando los IDs -->
+
+        <!-- Al final, el botón -->
+
+        <RadioGroup
+            android:id="@+id/pregunta15"
+            android:layout_width="395dp"
+            android:layout_height="270dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/p15_op1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en desacuerdo"
+                android:tag="1"/>
+
+            <RadioButton
+                android:id="@+id/p15_op2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="En desacuerdo"
+                android:tag="2"/>
+
+            <RadioButton
+                android:id="@+id/p15_op3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ni de acuerdo ni en desacuerdo"
+                android:tag="3"/>
+
+            <RadioButton
+                android:id="@+id/p15_op4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="De acuerdo"
+                android:tag="4"/>
+
+            <RadioButton
+                android:id="@+id/p15_op5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Totalmente en acuerdo"
+                android:tag="5"/>
+        </RadioGroup>
+        <Button
+            android:id="@+id/btnSiguiente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Siguiente"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"/>
+    </LinearLayout>
+</ScrollView>

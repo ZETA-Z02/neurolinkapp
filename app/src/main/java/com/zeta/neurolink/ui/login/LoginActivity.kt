@@ -1,36 +1,28 @@
 package com.zeta.neurolink.ui.login
 
-import android.app.Activity
 import android.content.Intent
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import android.provider.ContactsContract.CommonDataKinds.Website.URL
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
-import android.text.Editable
-import android.text.TextWatcher
 import android.util.Log
-import android.view.View
-import android.view.WindowManager
-import android.view.inputmethod.EditorInfo
 import android.widget.Button
-import android.widget.TextView
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import com.zeta.neurolink.MainActivity
 import com.zeta.neurolink.databinding.ActivityLoginBinding
-
 import com.zeta.neurolink.R
+import com.zeta.neurolink.ui.Preguntas
 import com.zeta.neurolink.ui.crearcuenta
-import com.zeta.neurolink.ui.home.HomeFragment
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.json.JSONObject
-import org.w3c.dom.Text
 import java.net.HttpURLConnection
 import java.net.URL
 import kotlin.jvm.java
-import kotlin.time.TestTimeSource
 
 class LoginActivity : AppCompatActivity() {
 
@@ -56,53 +48,6 @@ class LoginActivity : AppCompatActivity() {
         }
 
     }
-    private fun login(){
-        val username = findViewById<TextView>(R.id.username).text.toString()
-        val password = findViewById<TextView>(R.id.password).text.toString()
-        //Toast.makeText(this,"$username - $password",Toast.LENGTH_LONG).show()
-        Thread{
-            try{
-                val url = URL("https://zetta.alwaysdata.net/neurolink/login/loginCliente")
-                val postData = "usuario=$username&password=$password"
-                val conn = url.openConnection() as HttpURLConnection
-                conn.requestMethod = "POST"
-                conn.doOutput = true
-                conn.setRequestProperty("Content-Type","application/x-www-form-urlencoded")
-                conn.outputStream.use{it.write(postData.toByteArray())}
-                val responseCode = conn.responseCode
-                val response = conn.inputStream.bufferedReader().use {it.readText()}
-                runOnUiThread{
-                    if(responseCode == 200){
-                        // Puedes parsear el json usando JSONObject
-                        val respuestajson = JSONObject(response)
-                        val success = respuestajson.getBoolean("success")
-                        val error = respuestajson.getBoolean("error")
-                        if(success && !error){
-                            val data = respuestajson.getJSONObject("data")
-                            val idusuario = data.getInt("idusuario")
-                            Toast.makeText(this,"Login correcto. ID: $idusuario",Toast.LENGTH_LONG).show()
-                            val intent = Intent(this, MainActivity::class.java)
-                            intent.putExtra("idusuario",idusuario)
-                            startActivity(intent)
-                            finish()
-                        }else{
-                            Toast.makeText(this,"Acceso Denegado",Toast.LENGTH_LONG).show()
-                        }
-                    }else{
-                        Toast.makeText(this,"ERROR EN EL SERVIDOR",Toast.LENGTH_LONG).show()
-                    }
-                }
-            }catch(e:Exception){
-                runOnUiThread{
-                    Toast.makeText(this,"${e.message}",Toast.LENGTH_LONG).show()
-                    Log.e("API ERROR", "${e.message}")
-                }
-            }
-        }.start()
-        // Toast.makeText(this, "$username - $password", Toast.LENGTH_SHORT).show()
-
-    }
-
     private fun updateUiWithUser(model: LoggedInUserView) {
         val welcome = getString(R.string.welcome)
         val displayName = model.displayName
@@ -117,4 +62,105 @@ class LoginActivity : AppCompatActivity() {
     private fun showLoginFailed(@StringRes errorString: Int) {
         Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT).show()
     }
+    private fun login() {
+        val username = findViewById<EditText>(R.id.username).text.toString()
+        val password = findViewById<EditText>(R.id.password).text.toString()
+
+        if (username.isEmpty() || password.isEmpty()) {
+            Toast.makeText(this, "Usuario y contraseña son requeridos", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                // Primer request: Login
+                val loginResponse = makePostRequest(
+                    url = "https://zetta.alwaysdata.net/neurolink/login/loginCliente",
+                    params = "usuario=$username&password=$password"
+                )
+
+                if (loginResponse.code == 200) {
+                    val loginJson = JSONObject(loginResponse.body)
+                    if (loginJson.getBoolean("success") && !loginJson.getBoolean("error")) {
+                        val idusuario = loginJson.getJSONObject("data").getInt("idusuario")
+
+                        // Segundo request: Obtener datos del usuario
+                        val userDataResponse = makePostRequest(
+                            url = "https://zetta.alwaysdata.net/neurolink/clientes/getById",
+                            params = "idusuario=$idusuario"
+                        )
+
+                        handleUserDataResponse(userDataResponse, idusuario)
+                    } else {
+                        withContext(Dispatchers.Main) {
+                            //Toast.makeText(this, "Acceso Denegado", Toast.LENGTH_LONG).show()
+                        }
+                    }
+                } else {
+                    withContext(Dispatchers.Main) {
+                        //Toast.makeText(this, "ERROR EN EL SERVIDOR", Toast.LENGTH_LONG).show()
+                    }
+                }
+            } catch (e: Exception) {
+                withContext(Dispatchers.Main) {
+                    //Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_LONG).show()
+                    Log.e("API ERROR", e.message, e)
+                }
+            }
+        }
+    }
+
+    private suspend fun makePostRequest(url: String, params: String): Response {
+        val conn = URL(url).openConnection() as HttpURLConnection
+        return try {
+            conn.apply {
+                requestMethod = "POST"
+                doOutput = true
+                setRequestProperty("Content-Type", "application/x-www-form-urlencoded")
+                outputStream.use { it.write(params.toByteArray()) }
+            }
+
+            Response(
+                code = conn.responseCode,
+                body = conn.inputStream.bufferedReader().use { it.readText() }
+            )
+        } finally {
+            conn.disconnect()
+        }
+    }
+
+    private fun handleUserDataResponse(response: Response, idusuario: Int) {
+        if (response.code == 200) {
+            val json = JSONObject(response.body)
+            if (json.getBoolean("success") && !json.getBoolean("error")) {
+                val data = json.getJSONObject("data")
+                val puntaje = data.getString("puntaje")
+
+                val destination = if (puntaje == "1") {
+                    MainActivity::class.java
+                } else {
+                    Preguntas::class.java
+                }
+
+                runOnUiThread {
+                    val prefs = getSharedPreferences("sesion", MODE_PRIVATE)
+                    val editor = prefs.edit()
+                    editor.putInt("idusuario", idusuario)
+                    editor.apply()
+                    val intent = Intent(this, destination).apply {
+                        putExtra("idusuario", idusuario)
+                    }
+                    startActivity(intent)
+                    finish()
+                }
+            }
+        } else {
+            runOnUiThread {
+                Toast.makeText(this, "Error al obtener datos del usuario", Toast.LENGTH_LONG).show()
+            }
+        }
+    }
+
+    data class Response(val code: Int, val body: String)
+
 }

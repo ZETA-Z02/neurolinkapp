@@ -1,20 +1,25 @@
 package com.zeta.neurolink
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.lifecycle.MutableLiveData
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.zeta.neurolink.databinding.ActivityMainBinding
+import com.zeta.neurolink.ui.home.HomeFragment
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    //id usuario
+    var idusuario: Int = -1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -39,7 +44,9 @@ class MainActivity : AppCompatActivity() {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         // id usuario
-        val idusuario = intent.getIntExtra("idusuario", -1)
+        //val idusuario = intent.getIntExtra("idusuario", -1)
+        idusuario = intent.getIntExtra("idusuario", -1)
+
         // Toast.makeText(this, "$idusuario", Toast.LENGTH_LONG).show()
     }
 }

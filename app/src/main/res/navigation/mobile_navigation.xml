@@ -22,4 +22,13 @@
         android:name="com.zeta.neurolink.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+<!--    detalle de los retos-->
+    <fragment
+        android:id="@+id/retoDetalleFragment"
+        android:name="com.zeta.neurolink.ui.dashboard.RetoDetalleFragment"
+        android:label="Detalle del Reto"
+        tools:layout="@layout/fragment_reto_detalle" />
+
+
+
 </navigation>
