@@ -42,6 +42,15 @@
                 android:text="50 pts"
                 android:textColor="#777"
                 android:textSize="16sp" />
+
         </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Lo Logre!" />
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>

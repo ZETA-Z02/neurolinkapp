@@ -10,5 +10,8 @@ data class Reto(
     val puntaje: Int,
     val imagenUrl: String,
     val edadMinima: Int,
-    val nivel: String // puede ser "principiante", "intermedio", "avanzado"
+    val nivel: String,
+    val descripcion: String = "",
+    val consejos: String = "",
+    val videoUrl: String = ""
 )

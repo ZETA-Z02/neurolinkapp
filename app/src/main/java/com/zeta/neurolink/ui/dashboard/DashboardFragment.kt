@@ -40,6 +40,10 @@ class DashboardFragment : Fragment() {
             val bundle = Bundle().apply {
                 putString("titulo", reto.titulo)
                 putInt("puntaje", reto.puntaje)
+                putString("imagenUrl", reto.imagenUrl)
+                putString("videoUrl", reto.videoUrl)
+                putString("descripcion", reto.descripcion)
+                putString("consejos", reto.consejos)
             }
             findNavController().navigate(R.id.retoDetalleFragment, bundle)
         }
@@ -59,7 +63,6 @@ class DashboardFragment : Fragment() {
                 3 -> "avanzado"
                 else -> "principiante"
             }
-
             // 💡 Usa estos datos para cargar los retos
             viewModel.cargarRetosPorEdadYNivel(edad, nivelTexto)
         }

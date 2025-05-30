@@ -18,9 +18,6 @@
             android:name=".ui.Preguntas"
             android:exported="false" />
         <activity
-            android:name=".ui.Formularios"
-            android:exported="false" />
-        <activity
             android:name=".ui.Terminos"
             android:exported="false" />
         <activity

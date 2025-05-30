@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+//import com.bumptech.glide.Glide
 import com.zeta.neurolink.R
 
 class RetoAdapter(
@@ -28,6 +29,12 @@ class RetoAdapter(
         val reto = retos[position]
         holder.titulo.text = reto.titulo
         holder.puntaje.text = "${reto.puntaje} pts"
+//        Glide.with(holder.itemView.context)
+//            .load(reto.imagenUrl)
+//            .placeholder(R.drawable.circle_background) // mientras carga
+//            .error(R.drawable.circle_background) // si hay error
+//            .into(holder.imagen)
+
         holder.itemView.setOnClickListener { onClick(reto) }
     }
     private var retos: List<Reto> = lista
