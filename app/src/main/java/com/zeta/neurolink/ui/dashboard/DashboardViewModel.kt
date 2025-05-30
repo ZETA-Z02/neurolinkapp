@@ -12,7 +12,7 @@ class DashboardViewModel : ViewModel() {
         Reto("Reto para niños 1", 100, "https://pngimg.com/uploads/free/free_PNG90747.png", 0, "principiante",
             "Este reto está diseñado para niños que recién empiezan a expresarse.",
             "1. Habla sobre tu juguete favorito.\n2. Muestra una sonrisa.\n3. Mira a los ojos.",
-            "https://www.youtube.com/watch?v=gzivWXNW8Jc"),
+            "https://www.youtube.com/watch?v=RzJGIrCMSeI"),
 
         Reto("Reto para adolescentes", 200, "https://placehold.co/150.png", 15, "intermedio",
             "Reto para practicar una conversación con alguien nuevo en la escuela.",
