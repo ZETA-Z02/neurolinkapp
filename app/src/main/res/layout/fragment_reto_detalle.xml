@@ -15,21 +15,25 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Título del reto"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintTop_toTopOf="parent"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textSize="26sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textPuntaje"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="148dp"
+            android:layout_marginTop="20dp"
             android:text="Puntaje"
+            android:textAlignment="center"
             android:textSize="18sp"
-            app:layout_constraintTop_toBottomOf="@id/textTitulo"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="8dp" />
+            app:layout_constraintTop_toBottomOf="@id/textTitulo" />
 
         <TextView
             android:id="@+id/textDescripcion"
@@ -38,9 +42,12 @@
             android:text="Este reto trata sobre..."
             android:textSize="16sp"
             android:layout_marginTop="16dp"
+            android:background="@drawable/fondo_caja"
+            android:padding="12dp"
             app:layout_constraintTop_toBottomOf="@id/textPuntaje"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
+
 
         <WebView
             android:id="@+id/webViewVideo"
@@ -58,6 +65,8 @@
             android:text="Consejos para superar este reto:"
             android:textSize="16sp"
             android:layout_marginTop="16dp"
+            android:background="@drawable/fondo_caja"
+            android:padding="12dp"
             app:layout_constraintTop_toBottomOf="@id/webViewVideo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />

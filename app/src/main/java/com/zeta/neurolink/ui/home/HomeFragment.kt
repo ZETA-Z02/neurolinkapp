@@ -88,21 +88,21 @@ class HomeFragment : Fragment() {
         binding.textNombreUsuario.text = nombre
         binding.textPuntaje.text = "Puntaje: $puntaje"
         val categoriaView = when {
-            categoria == 1 -> "timidez"
-            categoria == 2 -> "antisocial"
-            categoria == 3 -> "asocial"
-            categoria == 4 -> "emo"
-            categoria == 5 -> "psicopata"
+            categoria == 1 -> "Inteligencia Emocional"
+            categoria == 2 -> "Ansiedad Social y Timidez"
+            categoria == 3 -> "Miedo al Ridiculo y Baja Autoestima"
+            categoria == 4 -> "Trauma y Rechazo"
+            categoria == 5 -> "Adaptacion y Resiliencia"
             else -> "timidez"
         }
         binding.textCategoria.text = "Categoría: $categoriaView"
 
         val nivel = when {
-            puntaje >= 2000 -> "Jefe"
-            puntaje >= 1000 -> "Diamante"
-            puntaje >= 500 -> "Oro"
-            puntaje >= 200 -> "Bronce"
-            puntaje >= 50 -> "Inicial"
+            puntaje >= 1200 -> "Super Avanzado"
+            puntaje >= 800 -> "Avanzado"
+            puntaje >= 400 -> "Proactivo"
+            puntaje >= 200 -> "Explorador"
+            puntaje >= 101 -> "Novato"
             else -> "Novato"
         }
         binding.textNivel.text = "Nivel: $nivel"

@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ProfesionalesFragment"
-    >
+    tools:context=".ui.ProfesionalesFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,163 +11,401 @@
         android:orientation="vertical">
 
         <TextView
-            android:text="Psicólogos Recomendados"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp"
+            android:layout_width="300dp"
             android:layout_height="40dp"
-            android:layout_width="300dp"/>
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:text="Psicólogos Recomendados"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
+        <!-- Tarjeta visual sin CardView -->
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:text="Dra. María López"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:textColor="#3F51B5"
-                android:layout_height="20dp"
-                android:layout_width="300dp"/>
-
-            <TextView
-                android:text="Especialista en ansiedad y terapia cognitiva."
-                android:layout_marginBottom="4dp"
-                android:layout_height="20dp"
-                android:layout_width="300dp"/>
-
-            <TextView
-                android:text="998777712"
-                android:textColor="#1E88E5"
-                android:onClick="abrirWeb"
-                android:tag="https://psicologiamarialopez.com"
-                android:clickable="true"
-                android:focusable="true"
-                android:layout_height="20dp"
-                android:layout_width="300dp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/borde_profesional"
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <TextView
+                android:layout_width="300dp"
+                android:layout_height="20dp"
                 android:text="Dra. María López"
-                android:textStyle="bold"
-                android:textSize="16sp"
                 android:textColor="#3F51B5"
-                android:layout_height="20dp"
-                android:layout_width="300dp"/>
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:text="Especialista en ansiedad y terapia cognitiva."
-                android:layout_marginBottom="4dp"
+                android:layout_width="300dp"
                 android:layout_height="20dp"
-                android:layout_width="300dp"/>
+                android:layout_marginTop="4dp"
+                android:text="Especialista en ansiedad y terapia cognitivo-conductual."
+                android:textSize="14sp" />
 
             <TextView
-                android:text="998777712"
-                android:textColor="#1E88E5"
-                android:onClick="abrirWeb"
-                android:tag="https://psicologiamarialopez.com"
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="4dp"
                 android:clickable="true"
                 android:focusable="true"
-                android:layout_height="20dp"
-                android:layout_width="300dp"/>
+                android:onClick="abrirWeb"
+                android:tag="https://psicologiamarialopez.com"
+                android:text="998777712"
+                android:textColor="#1E88E5" />
         </LinearLayout>
+
+        <!-- Otro profesional -->
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/borde_profesional"
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <TextView
-                android:text="Dra. María López"
-                android:textStyle="bold"
-                android:textSize="16sp"
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:text="Lic. Sofía Medina"
                 android:textColor="#3F51B5"
-                android:layout_height="20dp"
-                android:layout_width="300dp"/>
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:text="Especialista en ansiedad y terapia cognitiva."
-                android:layout_marginBottom="4dp"
+                android:layout_width="300dp"
                 android:layout_height="20dp"
-                android:layout_width="300dp"/>
+                android:layout_marginTop="4dp"
+                android:text="Psicóloga juvenil con enfoque en autoestima y habilidades sociales."
+                android:textSize="14sp" />
 
             <TextView
-                android:text="998777712"
-                android:textColor="#1E88E5"
-                android:onClick="abrirWeb"
-                android:tag="https://psicologiamarialopez.com"
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="4dp"
                 android:clickable="true"
                 android:focusable="true"
-                android:layout_height="20dp"
-                android:layout_width="300dp"/>
+                android:onClick="abrirWeb"
+                android:tag="https://sofiapsicologiajoven.com"
+                android:text="912345678"
+                android:textColor="#1E88E5" />
         </LinearLayout>
+
+        <!-- Otro más -->
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/borde_profesional"
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <TextView
-                android:text="Dra. María López"
-                android:textStyle="bold"
-                android:textSize="16sp"
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:text="Dr. Luis Torres"
                 android:textColor="#3F51B5"
-                android:layout_height="20dp"
-                android:layout_width="300dp"/>
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:text="Especialista en ansiedad y terapia cognitiva."
-                android:layout_marginBottom="4dp"
+                android:layout_width="300dp"
                 android:layout_height="20dp"
-                android:layout_width="300dp"/>
+                android:layout_marginTop="4dp"
+                android:text="Terapia para adolescentes con problemas de timidez y ansiedad social."
+                android:textSize="14sp" />
 
             <TextView
-                android:text="998777712"
-                android:textColor="#1E88E5"
-                android:onClick="abrirWeb"
-                android:tag="https://psicologiamarialopez.com"
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="4dp"
                 android:clickable="true"
                 android:focusable="true"
-                android:layout_height="20dp"
-                android:layout_width="300dp"/>
+                android:tag="https://psicologoluis.com"
+                android:text="911222333"
+                android:textColor="#1E88E5" />
         </LinearLayout>
+
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/borde_profesional"
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <TextView
+                android:layout_width="300dp"
+                android:layout_height="20dp"
                 android:text="Dra. María López"
-                android:textStyle="bold"
-                android:textSize="16sp"
                 android:textColor="#3F51B5"
-                android:layout_height="20dp"
-                android:layout_width="300dp"/>
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:text="Especialista en ansiedad y terapia cognitiva."
-                android:layout_marginBottom="4dp"
+                android:layout_width="300dp"
                 android:layout_height="20dp"
-                android:layout_width="300dp"/>
+                android:layout_marginTop="4dp"
+                android:text="Especialista en ansiedad y terapia cognitivo-conductual."
+                android:textSize="14sp" />
 
             <TextView
-                android:text="998777712"
-                android:textColor="#1E88E5"
-                android:onClick="abrirWeb"
-                android:tag="https://psicologiamarialopez.com"
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="4dp"
                 android:clickable="true"
                 android:focusable="true"
-                android:layout_height="20dp"
-                android:layout_width="300dp"/>
+                android:onClick="abrirWeb"
+                android:tag="https://psicologiamarialopez.com"
+                android:text="998777712"
+                android:textColor="#1E88E5" />
         </LinearLayout>
-        <!-- Puedes repetir el bloque anterior con otros profesionales -->
+
+        <!-- Otro profesional -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/borde_profesional"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:text="Lic. Sofía Medina"
+                android:textColor="#3F51B5"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="4dp"
+                android:text="Psicóloga juvenil con enfoque en autoestima y habilidades sociales."
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="abrirWeb"
+                android:tag="https://sofiapsicologiajoven.com"
+                android:text="912345678"
+                android:textColor="#1E88E5" />
+        </LinearLayout>
+
+        <!-- Otro más -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/borde_profesional"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:text="Dr. Luis Torres"
+                android:textColor="#3F51B5"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="4dp"
+                android:text="Terapia para adolescentes con problemas de timidez y ansiedad social."
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:tag="https://psicologoluis.com"
+                android:text="911222333"
+                android:textColor="#1E88E5" />
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    tools:context=".ui.ProfesionalesFragment"-->
+    <!--    >-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--        <TextView-->
+    <!--            android:text="Psicólogos Recomendados"-->
+    <!--            android:textSize="20sp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            android:layout_marginBottom="16dp"-->
+    <!--            android:layout_height="40dp"-->
+    <!--            android:layout_width="300dp"/>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:orientation="vertical"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content">-->
+
+    <!--            <TextView-->
+    <!--                android:text="Dra. María López"-->
+    <!--                android:textStyle="bold"-->
+    <!--                android:textSize="16sp"-->
+    <!--                android:textColor="#3F51B5"-->
+    <!--                android:layout_height="20dp"-->
+    <!--                android:layout_width="300dp"/>-->
+
+    <!--            <TextView-->
+    <!--                android:text="Especialista en ansiedad y terapia cognitiva."-->
+    <!--                android:layout_marginBottom="4dp"-->
+    <!--                android:layout_height="20dp"-->
+    <!--                android:layout_width="300dp"/>-->
+
+    <!--            <TextView-->
+    <!--                android:text="998777712"-->
+    <!--                android:textColor="#1E88E5"-->
+    <!--                android:onClick="abrirWeb"-->
+    <!--                android:tag="https://psicologiamarialopez.com"-->
+    <!--                android:clickable="true"-->
+    <!--                android:focusable="true"-->
+    <!--                android:layout_height="20dp"-->
+    <!--                android:layout_width="300dp"/>-->
+    <!--        </LinearLayout>-->
+    <!--        <LinearLayout-->
+    <!--            android:orientation="vertical"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="20dp">-->
+
+    <!--            <TextView-->
+    <!--                android:text="Dra. María López"-->
+    <!--                android:textStyle="bold"-->
+    <!--                android:textSize="16sp"-->
+    <!--                android:textColor="#3F51B5"-->
+    <!--                android:layout_height="20dp"-->
+    <!--                android:layout_width="300dp"/>-->
+
+    <!--            <TextView-->
+    <!--                android:text="Especialista en ansiedad y terapia cognitiva."-->
+    <!--                android:layout_marginBottom="4dp"-->
+    <!--                android:layout_height="20dp"-->
+    <!--                android:layout_width="300dp"/>-->
+
+    <!--            <TextView-->
+    <!--                android:text="998777712"-->
+    <!--                android:textColor="#1E88E5"-->
+    <!--                android:onClick="abrirWeb"-->
+    <!--                android:tag="https://psicologiamarialopez.com"-->
+    <!--                android:clickable="true"-->
+    <!--                android:focusable="true"-->
+    <!--                android:layout_height="20dp"-->
+    <!--                android:layout_width="300dp"/>-->
+    <!--        </LinearLayout>-->
+    <!--        <LinearLayout-->
+    <!--            android:orientation="vertical"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="20dp">-->
+
+    <!--            <TextView-->
+    <!--                android:text="Dra. María López"-->
+    <!--                android:textStyle="bold"-->
+    <!--                android:textSize="16sp"-->
+    <!--                android:textColor="#3F51B5"-->
+    <!--                android:layout_height="20dp"-->
+    <!--                android:layout_width="300dp"/>-->
+
+    <!--            <TextView-->
+    <!--                android:text="Especialista en ansiedad y terapia cognitiva."-->
+    <!--                android:layout_marginBottom="4dp"-->
+    <!--                android:layout_height="20dp"-->
+    <!--                android:layout_width="300dp"/>-->
+
+    <!--            <TextView-->
+    <!--                android:text="998777712"-->
+    <!--                android:textColor="#1E88E5"-->
+    <!--                android:onClick="abrirWeb"-->
+    <!--                android:tag="https://psicologiamarialopez.com"-->
+    <!--                android:clickable="true"-->
+    <!--                android:focusable="true"-->
+    <!--                android:layout_height="20dp"-->
+    <!--                android:layout_width="300dp"/>-->
+    <!--        </LinearLayout>-->
+    <!--        <LinearLayout-->
+    <!--            android:orientation="vertical"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="20dp">-->
+
+    <!--            <TextView-->
+    <!--                android:text="Dra. María López"-->
+    <!--                android:textStyle="bold"-->
+    <!--                android:textSize="16sp"-->
+    <!--                android:textColor="#3F51B5"-->
+    <!--                android:layout_height="20dp"-->
+    <!--                android:layout_width="300dp"/>-->
+
+    <!--            <TextView-->
+    <!--                android:text="Especialista en ansiedad y terapia cognitiva."-->
+    <!--                android:layout_marginBottom="4dp"-->
+    <!--                android:layout_height="20dp"-->
+    <!--                android:layout_width="300dp"/>-->
+
+    <!--            <TextView-->
+    <!--                android:text="998777712"-->
+    <!--                android:textColor="#1E88E5"-->
+    <!--                android:onClick="abrirWeb"-->
+    <!--                android:tag="https://psicologiamarialopez.com"-->
+    <!--                android:clickable="true"-->
+    <!--                android:focusable="true"-->
+    <!--                android:layout_height="20dp"-->
+    <!--                android:layout_width="300dp"/>-->
+    <!--        </LinearLayout>-->
+    <!--        <LinearLayout-->
+    <!--            android:orientation="vertical"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="20dp">-->
+
+    <!--            <TextView-->
+    <!--                android:text="Dra. María López"-->
+    <!--                android:textStyle="bold"-->
+    <!--                android:textSize="16sp"-->
+    <!--                android:textColor="#3F51B5"-->
+    <!--                android:layout_height="20dp"-->
+    <!--                android:layout_width="300dp"/>-->
+
+    <!--            <TextView-->
+    <!--                android:text="Especialista en ansiedad y terapia cognitiva."-->
+    <!--                android:layout_marginBottom="4dp"-->
+    <!--                android:layout_height="20dp"-->
+    <!--                android:layout_width="300dp"/>-->
+
+    <!--            <TextView-->
+    <!--                android:text="998777712"-->
+    <!--                android:textColor="#1E88E5"-->
+    <!--                android:onClick="abrirWeb"-->
+    <!--                android:tag="https://psicologiamarialopez.com"-->
+    <!--                android:clickable="true"-->
+    <!--                android:focusable="true"-->
+    <!--                android:layout_height="20dp"-->
+    <!--                android:layout_width="300dp"/>-->
+    <!--        </LinearLayout>-->
+    <!--        &lt;!&ndash; Puedes repetir el bloque anterior con otros profesionales &ndash;&gt;-->
+
+    <!--    </LinearLayout>-->
+    <!--</ScrollView>-->

@@ -58,10 +58,12 @@ class DashboardFragment : Fragment() {
         //Llamada a la API
         peticion(idusuario) { edad, nivel ->
             val nivelTexto = when (nivel) {
-                1 -> "principiante"
-                2 -> "intermedio"
-                3 -> "avanzado"
-                else -> "principiante"
+                1 -> "Inteligencia Emocional"
+                2 -> "Ansiedad Social y Timidez"
+                3 -> "Miedo al Ridiculo y Baja Autoestima"
+                4 -> "Trauma y Rechazo"
+                5 -> "Adaptación y Resiliencia"
+                else -> "Principiante"
             }
             // 💡 Usa estos datos para cargar los retos
             viewModel.cargarRetosPorEdadYNivel(edad, nivelTexto)
